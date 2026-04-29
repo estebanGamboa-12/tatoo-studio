@@ -1041,6 +1041,162 @@ textarea {
   transform: translateY(0);
 }
 
+@media (min-width: 1180px) {
+  .container {
+    width: min(1280px, calc(100% - 4rem));
+  }
+
+  .site-header-inner {
+    width: min(1320px, calc(100% - 2rem));
+  }
+
+  .section {
+    padding: 7.5rem 0;
+  }
+
+  .hero {
+    padding: 5.4rem 0 6.4rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.02fr) minmax(440px, 0.98fr);
+    gap: 2.2rem;
+  }
+
+  .hero-copy {
+    padding-top: 2.8rem;
+    max-width: 720px;
+  }
+
+  .hero-text {
+    max-width: 640px;
+    font-size: 1.14rem;
+  }
+
+  .hero-visual {
+    min-height: 780px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 2.4rem;
+  }
+
+  .feature-card,
+  .service-card,
+  .detail-card,
+  .process-card,
+  .amenity-card,
+  .quote-card,
+  .blog-card,
+  .meta-card,
+  .faq-item,
+  .panel-stack .card {
+    padding: 1.7rem;
+  }
+
+  .story-layout,
+  .reserve-layout,
+  .studio-columns,
+  .article-layout,
+  .page-hero-grid,
+  .blog-feature-grid {
+    gap: 1.8rem;
+  }
+
+  .service-grid {
+    gap: 1.25rem;
+  }
+
+  .gallery-grid,
+  .artist-grid,
+  .blog-grid {
+    gap: 1.25rem;
+  }
+
+  .gallery-card,
+  .artist-card {
+    min-height: 500px;
+  }
+
+  .gallery-copy h3,
+  .artist-name {
+    font-size: 1.95rem;
+  }
+
+  .page-visual {
+    min-height: 560px;
+  }
+
+  .blog-feature {
+    min-height: 560px;
+    padding: 2.3rem;
+  }
+
+  .blog-list {
+    gap: 1.2rem;
+  }
+
+  .blog-list .blog-card {
+    min-height: 270px;
+    padding: 1.9rem;
+  }
+
+  .quote-card {
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cta-panel {
+    padding: 2.4rem 2.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: min(1360px, calc(100% - 6rem));
+  }
+
+  .site-header-inner {
+    width: min(1400px, calc(100% - 3rem));
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(520px, 1fr);
+    gap: 2.6rem;
+  }
+
+  .hero-title {
+    font-size: clamp(5.4rem, 8vw, 8.8rem);
+  }
+
+  .hero-visual {
+    min-height: 840px;
+  }
+
+  .feature-card h3,
+  .service-card h3,
+  .process-card h3,
+  .detail-card h3,
+  .amenity-card h3,
+  .faq-question,
+  .blog-card-title {
+    font-size: 1.65rem;
+  }
+
+  .section-title {
+    font-size: clamp(3rem, 4.8vw, 5.4rem);
+  }
+
+  .gallery-card,
+  .artist-card {
+    min-height: 540px;
+  }
+}
+
 @media (max-width: 1120px) {
   .feature-grid,
   .service-grid,
