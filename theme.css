@@ -261,7 +261,9 @@ textarea {
   line-height: 0.94;
   letter-spacing: -0.04em;
   text-wrap: balance;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .section-title {
@@ -269,7 +271,8 @@ textarea {
 }
 
 .hero-title {
-  font-size: clamp(4.1rem, 11vw, 9.2rem);
+  font-size: clamp(3.8rem, 8vw, 7.4rem);
+  max-width: 8.4ch;
 }
 
 .display-title {
@@ -1059,13 +1062,13 @@ textarea {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 1.02fr) minmax(440px, 0.98fr);
+    grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
     gap: 2.2rem;
   }
 
   .hero-copy {
     padding-top: 2.8rem;
-    max-width: 720px;
+    max-width: 780px;
   }
 
   .hero-text {
@@ -1165,12 +1168,13 @@ textarea {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(520px, 1fr);
+    grid-template-columns: minmax(0, 1.08fr) minmax(500px, 0.92fr);
     gap: 2.6rem;
   }
 
   .hero-title {
-    font-size: clamp(5.4rem, 8vw, 8.8rem);
+    font-size: clamp(4.8rem, 6.9vw, 7.2rem);
+    max-width: 8.8ch;
   }
 
   .hero-visual {
