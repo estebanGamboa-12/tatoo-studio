@@ -260,6 +260,8 @@ textarea {
   font-family: "Bodoni Moda", serif;
   line-height: 0.94;
   letter-spacing: -0.04em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .section-title {
@@ -1066,6 +1068,10 @@ textarea {
 }
 
 @media (max-width: 760px) {
+  body {
+    overflow-x: clip;
+  }
+
   .site-header {
     position: static;
   }
@@ -1087,12 +1093,71 @@ textarea {
   .hero,
   .page-hero,
   .article-header {
-    padding: 3.6rem 0;
+    padding: 3rem 0;
   }
 
   .container,
   .footer-inner {
     width: min(100% - 1.2rem, 1220px);
+  }
+
+  .hero-copy {
+    padding-top: 0;
+  }
+
+  .hero-text,
+  .lead {
+    max-width: none;
+  }
+
+  .hero-actions,
+  .inline-links,
+  .social-proof,
+  .blog-meta,
+  .footer-meta {
+    gap: 0.7rem;
+  }
+
+  .hero-actions .btn,
+  .cta-panel .btn,
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .hero-actions .btn,
+  .btn {
+    letter-spacing: 0.18em;
+    font-size: 0.64rem;
+  }
+
+  .page-kicker::before,
+  .eyebrow::before {
+    width: 26px;
+  }
+
+  .feature-card,
+  .service-card,
+  .detail-card,
+  .process-card,
+  .amenity-card,
+  .quote-card,
+  .blog-card,
+  .meta-card,
+  .faq-item,
+  .panel-stack .card,
+  .article-main,
+  .reserve-banner {
+    padding: 1.2rem;
+  }
+
+  .feature-card h3,
+  .service-card h3,
+  .process-card h3,
+  .detail-card h3,
+  .amenity-card h3,
+  .faq-question,
+  .blog-card-title {
+    font-size: 1.28rem;
   }
 
   .hero-visual,
@@ -1111,6 +1176,27 @@ textarea {
   .gallery-card,
   .artist-card {
     min-height: 360px;
+  }
+
+  .gallery-copy,
+  .artist-body {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .gallery-copy h3,
+  .artist-name {
+    font-size: 1.45rem;
+  }
+
+  .gallery-copy p,
+  .artist-copy,
+  .timeline-copy,
+  .meta-copy,
+  .article-card-excerpt {
+    font-size: 0.96rem;
+    line-height: 1.6;
   }
 
   .gallery-card img,
@@ -1154,10 +1240,38 @@ textarea {
 
   .timeline-item {
     grid-template-columns: 1fr;
+    padding: 1.1rem;
   }
 
   .form-actions,
   .cta-panel {
+    align-items: flex-start;
+  }
+
+  .form-actions,
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .blog-feature,
+  .blog-card {
+    min-height: auto;
+  }
+
+  .article-main h2 {
+    font-size: 1.65rem;
+  }
+
+  .article-main h3 {
+    font-size: 1.3rem;
+  }
+
+  .article-main ul,
+  .article-main ol {
+    padding-left: 1.1rem;
+  }
+
+  .footer-inner {
     align-items: flex-start;
   }
 
@@ -1172,19 +1286,56 @@ textarea {
   }
 
   .hero-title {
-    font-size: clamp(3.2rem, 18vw, 5.2rem);
+    font-size: clamp(2.75rem, 16vw, 4.25rem);
+    line-height: 0.92;
   }
 
   .section-title,
   .display-title {
-    font-size: clamp(2.2rem, 12vw, 3.2rem);
+    font-size: clamp(2rem, 10.8vw, 2.9rem);
+    line-height: 0.98;
   }
 
   .hero-text,
   .lead,
   .article-main p,
   .article-main li {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .section,
+  .hero,
+  .page-hero,
+  .article-header {
+    padding: 2.35rem 0;
+  }
+
+  .site-header-inner {
+    min-height: 68px;
+    width: calc(100% - 1rem);
+  }
+
+  .brand {
+    font-size: 0.92rem;
+    letter-spacing: 0.18em;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .metric-value {
+    font-size: 2.15rem;
+  }
+
+  .metric-label {
+    font-size: 0.54rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-marquee {
+    display: none;
   }
 
   .mobile-dock {
@@ -1227,6 +1378,57 @@ textarea {
     right: 0.8rem;
     bottom: 0.8rem;
     padding: 0.8rem 0.85rem;
+  }
+
+  .feature-card,
+  .service-card,
+  .detail-card,
+  .process-card,
+  .amenity-card,
+  .quote-card,
+  .blog-card,
+  .meta-card,
+  .faq-item,
+  .panel-stack .card,
+  .article-main,
+  .reserve-banner {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .gallery-copy h3,
+  .artist-name,
+  .timeline-title {
+    font-size: 1.28rem;
+  }
+
+  .feature-card h3,
+  .service-card h3,
+  .process-card h3,
+  .detail-card h3,
+  .amenity-card h3,
+  .faq-question,
+  .blog-card-title {
+    font-size: 1.15rem;
+  }
+
+  .tag,
+  .article-tag,
+  .meta-pill {
+    font-size: 0.5rem;
+    letter-spacing: 0.18em;
+  }
+
+  .reserve-form {
+    gap: 0.85rem;
+  }
+
+  .field input,
+  .field select,
+  .field textarea,
+  .field-full textarea {
+    padding: 0.9rem;
+    border-radius: 16px;
   }
 
   .mobile-link {
