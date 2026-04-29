@@ -432,6 +432,9 @@ textarea {
   object-fit: cover;
   object-position: center center;
   filter: grayscale(0.16) sepia(0.18) brightness(0.56);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .hero-overlay,
@@ -617,6 +620,9 @@ textarea {
   object-fit: cover;
   object-position: center center;
   filter: grayscale(0.14) sepia(0.14) brightness(0.72);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
   transition: transform 0.6s ease, filter 0.35s ease;
 }
 

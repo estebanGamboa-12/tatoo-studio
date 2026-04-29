@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .from(heroVisual, { scale: 0.96, autoAlpha: 0, duration: 1.15 }, "-=1")
         .from(floatingNotes, { y: 24, autoAlpha: 0, stagger: 0.16, duration: 0.8 }, "-=0.75");
 
-      if (heroImage && window.ScrollTrigger) {
+      if (heroImage && window.ScrollTrigger && window.innerWidth > 980) {
         window.gsap.to(heroImage, {
           yPercent: 12,
           ease: "none",
